@@ -13,4 +13,5 @@ router.get( '/:id', readAllMovies );
 router.post( '/', addMovie )
 
 // remove movie from the list
+router.delete( '/', deleteMovie )
 router.delete( '/:id', deleteMovie )

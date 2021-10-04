@@ -1,11 +1,14 @@
 {
   "name": "node_test_hyf",
   "version": "1.0.0",
-  "description": "you can clone the repo then go to the terminatl in parent folder and put this command\r node index.js\r or you can use nodemon as well",
+  "description": "This is node test for HYF programming school",
   "main": "index.js",
   "type": "module",
+  "jest": {
+    "verbose": true
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --forceExit",
     "start": "node",
     "server": "nodemon index"
   },
@@ -22,9 +25,13 @@
   "homepage": "https://github.com/ObadaElSharbatly/Node_test_HYF#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "random-movie-names": "^1.0.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "babel-jest": "^27.2.4",
+    "jest": "^27.2.4",
     "nodemon": "^2.0.13",
     "supertest": "^6.1.6"
   }

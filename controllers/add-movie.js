@@ -1,5 +1,5 @@
 import { movies } from "../movies-list.js";
-import { movieIdFound, movieTitleFound } from "./movies-checking.js";
+import { movieTitleFound } from "./movies-checking.js";
 import { v4 as genId } from 'uuid';
 
 export const addMovie = (req, res) => {
@@ -13,14 +13,13 @@ export const addMovie = (req, res) => {
     if (!req.body.title || !req.body.director || !req.body.release_date) {
 
         res.status(400).json({err: "make sure that body has has the following properties 'title' , 'director', 'release_date'." });
-        return;
-
+    // user can't creat a movie with existed title    
     } else if (movieTitleFound(newMovie.title)) {
         
         res.status(400).json({err: `you already have this movie title (${newMovie.title}) in your list`});
 
     }
-
+    // correct inputs
     else {
         movies.push(newMovie);
 

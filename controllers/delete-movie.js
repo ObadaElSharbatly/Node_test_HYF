@@ -5,7 +5,7 @@ export const deleteMovie =  (req, res) => {
     const id = req.params.id;
 
     if (!id) {
-        res.status(400).json({err: `you didn't choose the movie to delete -- make sure to put the right movie id`});
+        res.status(400).json({err: "you didn't choose the movie to delete -- make sure to put the right movie id"});
 
     }
     //if the id in the url is not in the list
