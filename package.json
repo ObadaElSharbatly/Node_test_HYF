@@ -1,0 +1,31 @@
+{
+  "name": "node_test_hyf",
+  "version": "1.0.0",
+  "description": "you can clone the repo then go to the terminatl in parent folder and put this command\r node index.js\r or you can use nodemon as well",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node",
+    "server": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ObadaElSharbatly/Node_test_HYF.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ObadaElSharbatly/Node_test_HYF/issues"
+  },
+  "homepage": "https://github.com/ObadaElSharbatly/Node_test_HYF#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "supertest": "^6.1.6"
+  }
+}
