@@ -13,8 +13,10 @@ export const addMovie = (req, res) => {
     if (!req.body.title || !req.body.director || !req.body.release_date) {
 
         res.status(400).json({err: "make sure that body has has the following properties 'title' , 'director', 'release_date'." });
-    // user can't creat a movie with existed title    
-    } else if (movieTitleFound(newMovie.title)) {
+        
+    }
+    // user can't creat a movie with existed title
+    else if (movieTitleFound(newMovie.title)) {
         
         res.status(400).json({err: `you already have this movie title (${newMovie.title}) in your list`});
 
